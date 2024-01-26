@@ -52,16 +52,17 @@ const RegisterScreen: FC<Props> = (props) => {
 
     };
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: "gray" }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
             <CustomHeader goBack title="Kayıt Ol" />
             <View
                 style={{
                     flex: 1,
-                    justifyContent: "center",
+                    marginTop: responsiveHeight(50),
                     alignItems: "center",
                 }}
             >
                 <CustomInput
+                    title="Ad"
                     placeholder="Ad"
                     value={name}
                     onChangeText={setName}
@@ -71,6 +72,7 @@ const RegisterScreen: FC<Props> = (props) => {
                     }}
                 />
                 <CustomInput
+                    title="Soyad"
                     placeholder="Soyad"
                     value={surname}
                     onChangeText={setSurname}
@@ -80,6 +82,7 @@ const RegisterScreen: FC<Props> = (props) => {
                     }}
                 />
                 <CustomInput
+                    title="E-posta"
                     placeholder="E-posta"
                     value={email}
                     onChangeText={setEmail}
@@ -90,6 +93,7 @@ const RegisterScreen: FC<Props> = (props) => {
                     }}
                 />
                 <CustomInput
+                    title="Şifre"
                     placeholder="Şifre"
                     value={password}
                     onChangeText={setPassword}
@@ -101,9 +105,10 @@ const RegisterScreen: FC<Props> = (props) => {
                 />
 
                 <CustomButton
+                    size="large"
                     onPress={onRegister}
                     style={{
-                        marginTop: responsiveHeight(20),
+                        marginTop: responsiveHeight(40),
                         width: responsiveWidth(320),
                     }}
                 >Kayıt Ol</CustomButton>

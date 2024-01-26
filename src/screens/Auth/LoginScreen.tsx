@@ -34,7 +34,7 @@ const LoginScreen: FC<Props> = ({ navigation }) => {
         })
     };
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: "gray" }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
             <View
                 style={{
                     flex: 1,
@@ -57,6 +57,7 @@ const LoginScreen: FC<Props> = ({ navigation }) => {
 
                 </View>
                 <CustomInput
+                    title="E-posta"
                     placeholder="E-posta"
                     value={email}
                     onChangeText={setEmail}
@@ -67,6 +68,7 @@ const LoginScreen: FC<Props> = ({ navigation }) => {
                     }}
                 />
                 <CustomInput
+                    title="Şifre"
                     placeholder="Şifre"
                     value={password}
                     onChangeText={setPassword}
@@ -77,6 +79,7 @@ const LoginScreen: FC<Props> = ({ navigation }) => {
                     }}
                 />
                 <CustomButton
+                    size="large"
                     onPress={onLogin}
                     style={{
                         marginTop: responsiveHeight(20),
@@ -84,6 +87,8 @@ const LoginScreen: FC<Props> = ({ navigation }) => {
                     }}
                 >Giriş Yap</CustomButton>
                 <CustomButton
+                    size="large"
+
                     onPress={() => navigation.navigate(SCREENS.RegisterScreen)}
                     style={{
                         marginTop: responsiveHeight(20),
