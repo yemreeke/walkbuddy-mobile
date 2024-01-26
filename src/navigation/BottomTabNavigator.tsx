@@ -4,8 +4,9 @@ import { SCREENS } from "./Navigation";
 import { responsiveHeight } from "constants/Dimension";
 import { NavigationProp } from "@react-navigation/native";
 import { Icon } from "@ui-kitten/components";
-import HomeScreen from "screens/HomeScreen";
+import HomeScreen from "screens/HomeScreen/HomeScreen";
 import AccountScreen from "screens/Account";
+import MarketScreen from "screens/MarketScreen/MarketScreen";
 
 const Tab = createBottomTabNavigator();
 interface Props {
@@ -24,9 +25,9 @@ const BottomTabNavigator = (props: Props) => {
                     if (route.name === SCREENS.HomeScreen) {
                         iconName = focused ? 'home' : 'home-outline';
                     }
-                    // else if (route.name === SCREENS.ActiveRacesScreen) {
-                    //     iconName = focused ? 'list' : 'list-outline';
-                    // }
+                    else if (route.name === SCREENS.MarketScreen) {
+                        iconName = focused ? 'shopping-cart' : 'shopping-cart-outline';
+                    }
                     // else if (route.name === SCREENS.StartRaceQrScreen) {
                     //     iconName = focused ? 'flag' : 'flag-outline';
                     // }
@@ -42,6 +43,13 @@ const BottomTabNavigator = (props: Props) => {
                     return <Icon name={iconName} height={responsiveHeight(30)} width={responsiveHeight(30)} fill={color} />;
                 },
             })}>
+            <Tab.Screen
+                name={SCREENS.MarketScreen}
+                component={MarketScreen}
+                options={{
+                    title: "Market",
+                }}
+            />
             <Tab.Screen
                 name={SCREENS.HomeScreen}
                 component={HomeScreen}

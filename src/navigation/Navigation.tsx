@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "screens/HomeScreen";
+import HomeScreen from "screens/HomeScreen/HomeScreen";
 import LoginScreen from "screens/Auth/LoginScreen";
 import RegisterScreen from "screens/Auth/RegisterScreen";
 import { useAppDispatch, useAppSelector } from "store/Hooks";
@@ -51,5 +51,6 @@ export enum SCREENS {
     PersonalInfoScreen = "PersonalInfoScreen",
     PasswordChangeScreen = "PasswordChangeScreen",
     AccountDeleteScreen = "AccountDeleteScreen",
+    MarketScreen = "MarketScreen",
 }
 export default Navigation;

@@ -16,12 +16,12 @@ const HomeScreen: FC<Props> = (props) => {
                     justifyContent: "center",
                 }}
             >
-
                 <CustomText
                     style={{
                         fontSize: 20,
+                        marginHorizontal: 20,
                     }}
-                >{"User -> " + user}</CustomText>
+                >{"User -> " + JSON.stringify(user)}</CustomText>
             </View>
         </SafeAreaView>
     )
