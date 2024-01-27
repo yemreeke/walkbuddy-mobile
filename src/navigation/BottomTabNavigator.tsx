@@ -7,6 +7,7 @@ import { Icon } from "@ui-kitten/components";
 import HomeScreen from "screens/HomeScreen/HomeScreen";
 import AccountScreen from "screens/Account";
 import MarketScreen from "screens/MarketScreen/MarketScreen";
+import WalletScreen from "screens/Wallet/WalletScreen";
 
 const Tab = createBottomTabNavigator();
 interface Props {
@@ -28,9 +29,9 @@ const BottomTabNavigator = (props: Props) => {
                     else if (route.name === SCREENS.MarketScreen) {
                         iconName = focused ? 'shopping-cart' : 'shopping-cart-outline';
                     }
-                    // else if (route.name === SCREENS.StartRaceQrScreen) {
-                    //     iconName = focused ? 'flag' : 'flag-outline';
-                    // }
+                    else if (route.name === SCREENS.WalletScreen) {
+                        iconName = focused ? 'credit-card' : 'credit-card-outline';
+                    }
                     // else if (route.name === SCREENS.RaceResults) {
                     //     iconName = focused ? "hash" : 'hash-outline';
                     // }
@@ -55,6 +56,13 @@ const BottomTabNavigator = (props: Props) => {
                 component={HomeScreen}
                 options={{
                     title: "Ana Sayfa",
+                }}
+            />
+            <Tab.Screen
+                name={SCREENS.WalletScreen}
+                component={WalletScreen}
+                options={{
+                    title: "Cüzdan",
                 }}
             />
             <Tab.Screen

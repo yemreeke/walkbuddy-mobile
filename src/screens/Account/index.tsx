@@ -1,16 +1,15 @@
 import React, { FC } from "react"
-import { View, Image, Alert } from "react-native"
-import { NavigationProp, useFocusEffect } from "@react-navigation/native";
+import { View, Image } from "react-native"
+import { NavigationProp } from "@react-navigation/native";
 import { SCREENS } from "navigation/Navigation";
 import { SafeAreaView } from "react-native-safe-area-context";
-import CustomHeader from "components/CustomHeader";
 import AccountCard from "./components/AccountCard";
 import { useAppDispatch, useAppSelector } from "store/Hooks";
 import { logout } from "store/reducers/authReducer";
 import { responsiveHeight, responsiveWidth } from "constants/Dimension";
 import { Images } from "resources/Images";
-import { API_GetUserInfo } from "API/API";
 import CustomText from "components/CustomText";
+import { Colors } from "constants/Colors";
 interface Props {
     navigation: NavigationProp<any, any>
 }
@@ -33,14 +32,16 @@ const AccountScreen: FC<Props> = ({ navigation }) => {
                         width: responsiveWidth(100),
                         height: responsiveWidth(100),
                         borderRadius: 100,
-                        borderWidth: 2,
-                        borderColor: "#AAA"
+                        borderWidth: 3,
+                        borderColor: Colors["color-primary-200"]
                     }}
                 />
                 <CustomText style={{
                     textAlign: "center",
-                    fontSize: 22,
+                    fontSize: 25,
                     fontWeight: "600",
+                    marginVertical: responsiveHeight(10),
+
                 }}>{`${user?.name} ${user?.surname}`}</CustomText>
                 <AccountCard text="Kişisel Bilgiler" icon="person-outline" onPress={() => navigation.navigate(SCREENS.PersonalInfoScreen)} />
                 <AccountCard text="Şifremi Değiştir" icon="lock-outline" onPress={() => navigation.navigate(SCREENS.PasswordChangeScreen)} />

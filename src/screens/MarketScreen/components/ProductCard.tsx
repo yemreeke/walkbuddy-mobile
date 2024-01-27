@@ -7,14 +7,18 @@ import { Image, TouchableOpacity, View } from "react-native"
 import ProductBuyContent from "../contents/ProductBuyContent"
 interface Props {
     product: IProduct
+    onBuy: (order_number: number) => void
 }
-const ProductCard: FC<Props> = ({ product }) => {
+const ProductCard: FC<Props> = ({ product, onBuy }) => {
+
     const onDetail = () => {
         AlertDialog.show({
-            content: <ProductBuyContent onBuy={() => { }} product={product} />,
+            content: <ProductBuyContent onBuy={onBuy} product={product} />,
             mode: "CENTER",
         })
     }
+
+
     return (
         <TouchableOpacity
             onPress={onDetail}

@@ -1,13 +1,12 @@
 import React, { FC } from "react"
-import { Button, View } from "react-native"
-import { NavigationProp } from "@react-navigation/native";
+import { View } from "react-native"
 import CustomText from "components/CustomText";
 import { responsiveHeight, responsiveWidth } from "constants/Dimension";
 import CustomButton from "components/CustomButton";
 import AlertDialog from "components/AlertDialog";
 import { IProduct } from "interfaces/Market";
 interface Props {
-    onBuy: () => void
+    onBuy: (order_id: number) => void
     product: IProduct
 
 }
@@ -45,7 +44,7 @@ const ProductBuyContent: FC<Props> = ({ onBuy, product }) => {
                     onPress={() => AlertDialog.dismiss()}
                 >Hayır</CustomButton>
                 <CustomButton
-                    onPress={onBuy}
+                    onPress={() => onBuy(product.id)}
                 >Evet</CustomButton>
             </View>
         </View>
