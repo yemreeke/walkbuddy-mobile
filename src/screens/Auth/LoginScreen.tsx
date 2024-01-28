@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react"
-import { Alert, View } from "react-native"
+import { Alert, ScrollView, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context";
 import CustomInput from "components/CustomInput";
 import { responsiveHeight, responsiveWidth } from "constants/Dimension";
@@ -42,59 +42,60 @@ const LoginScreen: FC<Props> = ({ navigation }) => {
                     alignItems: "center",
                 }}
             >
+                <ScrollView>
+                    <View
+                        style={{
+                            height: responsiveWidth(200),
+                            width: responsiveWidth(200),
+                            backgroundColor: "red",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            borderRadius: 10,
+                        }}
+                    >
+                        <CustomText style={{ fontSize: 30, fontWeight: "700" }}>LOGO</CustomText>
 
-                <View
-                    style={{
-                        height: responsiveWidth(200),
-                        width: responsiveWidth(200),
-                        backgroundColor: "red",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        borderRadius: 10,
-                    }}
-                >
-                    <CustomText style={{ fontSize: 30, fontWeight: "700" }}>LOGO</CustomText>
+                    </View>
+                    <CustomInput
+                        title="E-posta"
+                        placeholder="E-posta"
+                        value={email}
+                        onChangeText={setEmail}
+                        personIcon
+                        viewStyle={{
+                            marginTop: responsiveHeight(20),
+                            width: responsiveWidth(320),
+                        }}
+                    />
+                    <CustomInput
+                        title="Şifre"
+                        placeholder="Şifre"
+                        value={password}
+                        onChangeText={setPassword}
+                        type="password"
+                        viewStyle={{
+                            marginTop: responsiveHeight(20),
+                            width: responsiveWidth(320),
+                        }}
+                    />
+                    <CustomButton
+                        size="large"
+                        onPress={onLogin}
+                        style={{
+                            marginTop: responsiveHeight(20),
+                            width: responsiveWidth(320),
+                        }}
+                    >Giriş Yap</CustomButton>
+                    <CustomButton
+                        size="large"
 
-                </View>
-                <CustomInput
-                    title="E-posta"
-                    placeholder="E-posta"
-                    value={email}
-                    onChangeText={setEmail}
-                    personIcon
-                    viewStyle={{
-                        marginTop: responsiveHeight(20),
-                        width: responsiveWidth(320),
-                    }}
-                />
-                <CustomInput
-                    title="Şifre"
-                    placeholder="Şifre"
-                    value={password}
-                    onChangeText={setPassword}
-                    type="password"
-                    viewStyle={{
-                        marginTop: responsiveHeight(20),
-                        width: responsiveWidth(320),
-                    }}
-                />
-                <CustomButton
-                    size="large"
-                    onPress={onLogin}
-                    style={{
-                        marginTop: responsiveHeight(20),
-                        width: responsiveWidth(320),
-                    }}
-                >Giriş Yap</CustomButton>
-                <CustomButton
-                    size="large"
-
-                    onPress={() => navigation.navigate(SCREENS.RegisterScreen)}
-                    style={{
-                        marginTop: responsiveHeight(20),
-                        width: responsiveWidth(320),
-                    }}
-                >Kayıt Ol</CustomButton>
+                        onPress={() => navigation.navigate(SCREENS.RegisterScreen)}
+                        style={{
+                            marginTop: responsiveHeight(20),
+                            width: responsiveWidth(320),
+                        }}
+                    >Kayıt Ol</CustomButton>
+                </ScrollView>
             </View>
         </SafeAreaView>
     )

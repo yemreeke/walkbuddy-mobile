@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react"
-import { Alert, View } from "react-native"
+import { Alert, ScrollView, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context";
 import CustomInput from "components/CustomInput";
 import { responsiveHeight, responsiveWidth } from "constants/Dimension";
@@ -61,57 +61,60 @@ const RegisterScreen: FC<Props> = (props) => {
                     alignItems: "center",
                 }}
             >
-                <CustomInput
-                    title="Ad"
-                    placeholder="Ad"
-                    value={name}
-                    onChangeText={setName}
-                    viewStyle={{
-                        marginTop: responsiveHeight(20),
-                        width: responsiveWidth(320),
-                    }}
-                />
-                <CustomInput
-                    title="Soyad"
-                    placeholder="Soyad"
-                    value={surname}
-                    onChangeText={setSurname}
-                    viewStyle={{
-                        marginTop: responsiveHeight(20),
-                        width: responsiveWidth(320),
-                    }}
-                />
-                <CustomInput
-                    title="E-posta"
-                    placeholder="E-posta"
-                    value={email}
-                    onChangeText={setEmail}
-                    personIcon
-                    viewStyle={{
-                        marginTop: responsiveHeight(20),
-                        width: responsiveWidth(320),
-                    }}
-                />
-                <CustomInput
-                    title="Şifre"
-                    placeholder="Şifre"
-                    value={password}
-                    onChangeText={setPassword}
-                    type="password"
-                    viewStyle={{
-                        marginTop: responsiveHeight(20),
-                        width: responsiveWidth(320),
-                    }}
-                />
+                <ScrollView>
 
-                <CustomButton
-                    size="large"
-                    onPress={onRegister}
-                    style={{
-                        marginTop: responsiveHeight(40),
-                        width: responsiveWidth(320),
-                    }}
-                >Kayıt Ol</CustomButton>
+                    <CustomInput
+                        title="Ad"
+                        placeholder="Ad"
+                        value={name}
+                        onChangeText={setName}
+                        viewStyle={{
+                            marginTop: responsiveHeight(20),
+                            width: responsiveWidth(320),
+                        }}
+                    />
+                    <CustomInput
+                        title="Soyad"
+                        placeholder="Soyad"
+                        value={surname}
+                        onChangeText={setSurname}
+                        viewStyle={{
+                            marginTop: responsiveHeight(20),
+                            width: responsiveWidth(320),
+                        }}
+                    />
+                    <CustomInput
+                        title="E-posta"
+                        placeholder="E-posta"
+                        value={email}
+                        onChangeText={setEmail}
+                        personIcon
+                        viewStyle={{
+                            marginTop: responsiveHeight(20),
+                            width: responsiveWidth(320),
+                        }}
+                    />
+                    <CustomInput
+                        title="Şifre"
+                        placeholder="Şifre"
+                        value={password}
+                        onChangeText={setPassword}
+                        type="password"
+                        viewStyle={{
+                            marginTop: responsiveHeight(20),
+                            width: responsiveWidth(320),
+                        }}
+                    />
+
+                    <CustomButton
+                        size="large"
+                        onPress={onRegister}
+                        style={{
+                            marginTop: responsiveHeight(40),
+                            width: responsiveWidth(320),
+                        }}
+                    >Kayıt Ol</CustomButton>
+                </ScrollView>
             </View>
         </SafeAreaView>
     )
