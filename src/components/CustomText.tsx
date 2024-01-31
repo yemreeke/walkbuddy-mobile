@@ -8,7 +8,6 @@ const CustomText: FC<Props> = (props) => {
             {...props}
             style={[{
                 color: "#000",
-                // fontFamily: Fonts.Inter_Regular_400,
             }, props.style]}
         >
             {props.children}

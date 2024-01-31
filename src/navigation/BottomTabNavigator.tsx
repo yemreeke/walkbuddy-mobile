@@ -32,12 +32,6 @@ const BottomTabNavigator = (props: Props) => {
                     else if (route.name === SCREENS.WalletScreen) {
                         iconName = focused ? 'credit-card' : 'credit-card-outline';
                     }
-                    // else if (route.name === SCREENS.RaceResults) {
-                    //     iconName = focused ? "hash" : 'hash-outline';
-                    // }
-                    // else if (route.name === SCREENS.AccountScreen) {
-                    //     iconName = focused ? "person" : "person-outline";
-                    // }
                     else if (route.name === SCREENS.AccountScreen) {
                         iconName = focused ? "person" : "person-outline";
                     }
@@ -72,34 +66,7 @@ const BottomTabNavigator = (props: Props) => {
                     title: "Hesabım",
                 }}
             />
-            {/* <Tab.Screen
-                name={SCREENS.ActiveRacesScreen}
-                component={ActiveRacesScreen}
-                options={{
-                    title: "Yarışlarım",
-                }}
-            />
-            <Tab.Screen
-                name={SCREENS.StartRaceQrScreen}
-                component={StartRaceQrScreen}
-                options={{
-                    title: "Yarışa Başla",
-                }}
-            />
-            <Tab.Screen
-                name={SCREENS.RaceResults}
-                component={RaceResults}
-                options={{
-                    title: "Yarış Sonuçlarım",
-                }}
-            />
-            <Tab.Screen
-                name={SCREENS.AccountScreen}
-                component={AccountScreen}
-                options={{
-                    title: "Hesabım",
-                }}
-            /> */}
+
         </Tab.Navigator>
     )
 };

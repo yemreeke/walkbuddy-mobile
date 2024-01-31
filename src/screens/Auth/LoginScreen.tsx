@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react"
-import { Alert, ScrollView, View } from "react-native"
+import { Alert, Image, ScrollView, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context";
 import CustomInput from "components/CustomInput";
 import { responsiveHeight, responsiveWidth } from "constants/Dimension";
@@ -11,6 +11,7 @@ import { API_Login } from "API/API";
 import { useAppDispatch } from "store/Hooks";
 import { login } from "store/reducers/authReducer";
 import { ValidateEmail } from "utils/ValidateEmail";
+import { Images } from "resources/Images";
 interface Props {
     navigation: NavigationProp<any, any>,
 }
@@ -43,19 +44,19 @@ const LoginScreen: FC<Props> = ({ navigation }) => {
                 }}
             >
                 <ScrollView>
-                    <View
+                    <Image
+
+                        source={Images.Logo}
                         style={{
                             height: responsiveWidth(200),
                             width: responsiveWidth(200),
-                            backgroundColor: "red",
                             alignItems: "center",
                             justifyContent: "center",
                             borderRadius: 10,
+                            alignSelf: "center",
                         }}
-                    >
-                        <CustomText style={{ fontSize: 30, fontWeight: "700" }}>LOGO</CustomText>
+                    />
 
-                    </View>
                     <CustomInput
                         title="E-posta"
                         placeholder="E-posta"
