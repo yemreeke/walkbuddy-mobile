@@ -1,22 +1,11 @@
 # Uygulama GÖrüntüleri
 
-## 1. Görüntü
-![1. Görüntü](/ss/1.png)
-
-## 2. Görüntü
-![2. Görüntü](ss/2.png)
-
-## 3. Görüntü
-![3. Görüntü](ss/3.png)
-
-## 4. Görüntü
-![4. Görüntü](ss/4.png)
-
-## 5. Görüntü
-![5. Görüntü](ss/5.png)
-
-## 6. Görüntü
-![6. Görüntü](ss/6.png)
+<img src="ss/1.png" alt="1. Görüntü" width="200" />
+<img src="ss/2.png" alt="2. Görüntü" width="200" />
+<img src="ss/3.png" alt="3. Görüntü" width="200" />
+<img src="ss/4.png" alt="4. Görüntü" width="200" />
+<img src="ss/5.png" alt="5. Görüntü" width="200" />
+<img src="ss/6.png" alt="6. Görüntü" width="200" />
 
 
 
