@@ -1,3 +1,25 @@
+# Uygulama GÖrüntüleri
+
+## 1. Görüntü
+![1. Görüntü](/ss/1.png)
+
+## 2. Görüntü
+![2. Görüntü](ss/2.png)
+
+## 3. Görüntü
+![3. Görüntü](ss/3.png)
+
+## 4. Görüntü
+![4. Görüntü](ss/4.png)
+
+## 5. Görüntü
+![5. Görüntü](ss/5.png)
+
+## 6. Görüntü
+![6. Görüntü](ss/6.png)
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
